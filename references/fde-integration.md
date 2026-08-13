@@ -17,3 +17,10 @@ Required behavior:
 - Prefer FDE's existing trend/frequency window feature builders when importable.
 
 Outputs are offline fitability validation artifacts, not online deployment backtests.
+# Governed Foundry boundary
+
+The production integration is a two-stage port: this Skill emits
+`autoresearch-policy-result/v1`; FDE Foundry validates the pinned data/acceptance hashes
+and submits executions through `FDEKernelProvider`. The policy CLI accepts no local FDE
+checkout, model path, benchmark path, or project-state write location. Existing offline
+execution remains a local research utility and is not an admitted Foundry capability.
